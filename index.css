@@ -169,6 +169,7 @@ section {
 }
 
 .content {
+  color: var(--dark-color);
   position: relative;
   font-size: 28px;
   line-height: 4rem;
@@ -176,6 +177,7 @@ section {
 }
 
 .content-sub {
+  color: var(--dark-color);
   position: relative;
   font-size: 20px;
   line-height: 4rem;

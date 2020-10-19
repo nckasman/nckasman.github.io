@@ -74,7 +74,7 @@ h1 {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -84,6 +84,7 @@ h1 {
 }
 
 path {
+  display: flex;
   stroke: #24292E;
   fill: #24292E;
   stroke-dasharray: 1800;
@@ -222,12 +223,11 @@ section {
   margin-left: 2%;
   margin-right: 2%;
   margin-top: -2%;
-  width: 7%;
-  height: 7%;
   filter: opacity(0.81);
 }
 
 .projects-section {
+  width: 100%;
   padding: 10% 0;
   background-color: var(--light-color);
 }
@@ -274,7 +274,7 @@ section {
   box-shadow: 0 0 5px #012D10, 0 0 25px #012D10, 0 0 50px #012D10, 0 0 200px #012D10;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .project-display {
     display: block;
   }
@@ -327,6 +327,7 @@ section {
   color: #FF425E;
   text-transform: lowercase;
   transition: .8s cubic-bezier(.06, .75, .62, .99);
+  text-align: center;
 }
 
 .mail:hover {

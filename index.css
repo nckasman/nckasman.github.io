@@ -84,7 +84,6 @@ h1 {
 }
 
 path {
-  display: flex;
   stroke: #24292E;
   fill: #24292E;
   stroke-dasharray: 1800;
@@ -219,6 +218,7 @@ section {
 }
 
 .images img {
+  width: 7%;
   margin-bottom: 1%;
   margin-left: 2%;
   margin-right: 2%;

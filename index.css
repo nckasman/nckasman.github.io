@@ -1,0 +1,353 @@
+:root {
+    /* nice colors */
+    --red: #ed254e;
+    --yellow: #f9dc5c;
+
+    /* primary colors */
+    --jet: #353535;
+    --white: #ffffff;
+    --grey: #d2d7df;
+
+    /* cool fonts */
+    --plex: 'IBM Plex Sans', sans-serif;
+    --fira: 'Fira Code', monospace;
+}
+
+html {
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+    scroll-behavior: smooth;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#scrollpath {
+    position: fixed;
+    top: 2.5%;
+    right: 2.5%;
+    width: .25%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+}
+
+#progressbar {
+    position: fixed;
+    top: 2.5%;
+    right: 2.5%;
+    width: .25%;
+    background: linear-gradient(to top, var(--jet), var(--grey));
+    border-radius: 2px;
+
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+nav {
+    text-transform: lowercase;
+    position: fixed;
+    right: 4%;
+    font-family: var(--plex);
+    font-weight: 700;
+    font-size: 2vh;
+    text-align: right;
+}
+
+.cont {
+    margin-left: 20%;
+    margin-right: 25%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container ul li {
+    line-height: 15vh;
+}
+
+nav a {
+    color: var(--grey);
+    transition: 0.3s;
+}
+
+.active {
+    color: var(--jet);
+    font-size: 1.8em;
+    transition: 0.3s ease;
+}
+
+section {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 10% 0;
+}
+
+section p {
+    font-family: var(--plex);
+    font-size: 1.25em;
+    color: var(--jet);
+}
+
+.name {
+    position: relative;
+    width: 75%;
+    margin-bottom: 5%;
+}
+
+.name path {
+    stroke-dasharray: 45;
+    stroke-dashoffset: 45;
+    animation: animate 2.5s linear forwards;
+}
+
+@keyframes animate {
+    40% {
+        stroke-dasharray: 300;
+        stroke-dashoffset: 675;
+    }
+    99.99% {
+        stroke-dasharray: 450;
+        stroke-dashoffset: 900;
+    }
+    100% {
+        stroke-dasharray: 450;
+        stroke-dashoffset: 900;
+        fill: var(--jet);
+    }
+}
+
+#intro {
+    display: flex;
+}
+
+#more {
+    padding: 3% 7%;
+    background: var(--jet);
+    color: var(--yellow);
+    font-family: var(--fira);
+    font-size: 1.2em;
+}
+
+#pfp img{
+    width: 80%;
+    border-radius: 0%;
+    float: right;
+    filter: brightness(115%);
+}
+
+#text {
+    font-weight: 300;
+    text-align: left;
+    line-height: 2rem;
+}
+
+#contact {
+    margin-top: 20%;
+    text-transform: lowercase;
+}
+
+#contact a {
+    position: relative;
+    color: var(--jet);
+    font-family: var(--fira);
+    font-weight: 400;
+}
+
+#contact #mail::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: var(--jet);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+
+#contact #mail:hover {
+    color: var(--red);
+}
+
+#contact #mail:hover::after,
+#contact #mail:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+  background-color: var(--red);
+}
+
+#contact #git::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: var(--jet);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+
+#contact #git:hover {
+    color: #c9510c;
+}
+
+#contact #git:hover::after,
+#contact #git:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+  background-color: #c9510c;
+}
+
+#contact #dev::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: var(--jet);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+
+#contact #dev:hover {
+    color: #003e54;
+}
+
+#contact #dev:hover::after,
+#contact #dev:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+  background-color: #003e54;
+}
+
+#contact #linked::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: var(--jet);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+
+#contact #linked:hover {
+    color: #2867B2;
+}
+
+#contact #linked:hover::after,
+#contact #linked:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+  background-color: #2867B2;
+}
+
+#education {
+    padding-bottom: 50%;
+}
+
+#tamu img {
+    float: left;
+    width: 36%;
+}
+
+#unitext {
+    float: left;
+    margin-top: 2%;
+    width: 60%;
+}
+
+#projects {
+    padding-bottom: 75%;
+}
+
+.project a {
+    color: var(--red);
+}
+
+.project a:hover {
+    font-size: 1.5em;
+}
+
+.projects-container {
+    float: left;
+    display: flex;
+}
+
+.projects-list {
+    line-height: 2em;
+    text-transform: lowercase;
+}
+
+.project-name {
+    font-family: var(--fira);
+    font-weight: 700;
+    font-size: 1.5em;
+    color: var(--red);
+    margin-right: 5%;
+}
+
+footer {
+    display: block;
+    padding-top: 15%;
+}
+
+#message {
+    position: absolute;
+    font-family: var(--fira);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.08rem;
+    right: 1vw;
+}
+
+.fa-heart {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1.5);
+    }
+    25% {
+      transform: scale(1.2);
+    }
+    50% {
+      transform: scale(1.7);
+    }
+    75% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1.5);
+    }
+  }

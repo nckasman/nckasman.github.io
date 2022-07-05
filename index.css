@@ -152,6 +152,7 @@ section p {
     color: var(--yellow);
     font-family: var(--fira);
     font-size: 1.2em;
+    border-width: 4px;
 }
 
 #pfp img{

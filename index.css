@@ -36,7 +36,7 @@ body {
 
 #scrollpath {
     position: fixed;
-    top: 2.5%;
+    top: 5%;
     right: 2.5%;
     width: .25%;
     background: rgba(255, 255, 255, 0.05);
@@ -45,7 +45,7 @@ body {
 
 #progressbar {
     position: fixed;
-    top: 2.5%;
+    top: 5%;
     right: 2.5%;
     width: .25%;
     background: linear-gradient(to top, var(--jet), var(--grey));
@@ -66,6 +66,7 @@ body {
 nav {
     text-transform: lowercase;
     position: fixed;
+    top: 5%;
     right: 4%;
     font-family: var(--plex);
     font-weight: 700;
@@ -352,3 +353,28 @@ footer {
       transform: scale(1.5);
     }
   }
+
+  #announcement {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    color: var(--jet);
+    font-family: var(--fira);
+    background-color: var(--jet);
+    width: 100%;
+}
+
+#announcement div {
+    text-align: center;
+    line-height: 5px;
+    color: var(--red);
+}
+
+#announcement div a {
+    color: var(--yellow);
+}
+
+#newlink:hover {
+    color: "black";
+}
